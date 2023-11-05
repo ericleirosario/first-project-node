@@ -3,7 +3,7 @@ const uuid = require('uuid')
 
 const app = express()
 const port = 5000
-app.use(express.json()) // Definindo que toda nossa aplicação utilizada JSON
+app.use(express.json())
 
 
 const users = []
@@ -57,14 +57,6 @@ app.delete('/users/:id', checkUserId, (request, response) => {
 
     return response.status(204).json()
 })
-
-
-
-
-
-
-
-
 
 app.listen(port, ()=> {
     console.log(`✔ Server started on port ${port}`)
